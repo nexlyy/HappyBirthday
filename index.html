@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0a0006" />
+  <title>С днём рождения, Ева ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Pacifico&family=Caveat:wght@500;700&family=Yeseva+One&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three.module.js" } }
+  </script>
+</head>
+<body>
+
+  <!-- слои фона -->
+  <canvas id="bg-canvas"></canvas>
+  <canvas id="scene-canvas"></canvas>
+  <canvas id="confetti"></canvas>
+
+  <!-- кнопка музыки -->
+  <button id="music-btn" aria-label="Музыка" title="Музыка">
+    <span class="bars"><i></i><i></i><i></i><i></i></span>
+  </button>
+
+  <!-- ИНТРО / открыть подарок -->
+  <div id="intro">
+    <div class="intro-inner">
+      <div class="gift">🎁</div>
+      <p class="intro-hint">Тебя ждёт подарок</p>
+      <button id="open-btn">Открыть&nbsp;❤️</button>
+      <p class="intro-small">нажми, чтобы начать</p>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div id="hero-content">
+      <p class="hero-eyebrow">С Днём Рождения</p>
+      <h1 id="hero-name">Ева</h1>
+      <p id="hero-sub" class="hero-sub"></p>
+      <div class="hero-counter">
+        <span>Вместе уже</span>
+        <strong id="together-days">0</strong>
+        <span id="together-label">дней</span>
+      </div>
+    </div>
+    <div id="scroll-hint">
+      <span>листай вниз</span>
+      <div class="chevron"></div>
+    </div>
+  </section>
+
+  <!-- ПИСЬМО -->
+  <section id="section-letter" class="content reveal">
+    <div class="letter">
+      <h2 id="letter-title" class="script">Моей Еве</h2>
+      <div id="letter-text" class="letter-body"></div>
+      <div id="letter-sign-wrap" class="letter-sign">
+        <span id="letter-sign"></span>
+        <span class="heart-sign">❤</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПРИЧИНЫ -->
+  <section id="section-reasons" class="content reveal">
+    <h2 class="section-title">За что я тебя люблю</h2>
+    <ul id="reasons" class="reasons"></ul>
+  </section>
+
+  <!-- ПОЖЕЛАНИЯ НА 18 -->
+  <section id="section-wishes" class="content reveal">
+    <h2 class="section-title" id="wishes-title">Пожелания на 18</h2>
+    <ul id="wishes" class="wishes"></ul>
+  </section>
+
+  <!-- НАША ПЕСНЯ -->
+  <section id="section-song" class="content reveal">
+    <button class="song-card" id="song-card">
+      <div class="disc"><div class="disc-hole"></div></div>
+      <div class="song-info">
+        <span class="song-label" id="song-title">Наша песня</span>
+        <strong id="song-name">Louis Vuitton Kiss</strong>
+        <span class="song-artist" id="song-artist">PHARAON</span>
+        <span class="song-note" id="song-note">нажми, чтобы включить 🎧</span>
+      </div>
+      <div class="song-eq"><i></i><i></i><i></i><i></i><i></i></div>
+    </button>
+  </section>
+
+  <!-- ФОТО-СЛАЙДЕР -->
+  <section id="section-gallery" class="content reveal">
+    <h2 class="section-title" id="gallery-title">Просто ты 🤍</h2>
+    <div id="slider" class="slider">
+      <div class="slides" id="slides"></div>
+      <button class="s-arrow prev" id="s-prev" aria-label="Назад">‹</button>
+      <button class="s-arrow next" id="s-next" aria-label="Вперёд">›</button>
+      <div class="s-dots" id="s-dots"></div>
+    </div>
+  </section>
+
+  <!-- ЛАЙТБОКС -->
+  <div id="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="" />
+  </div>
+
+  <!-- ОТКРОЙ СЮРПРИЗ -->
+  <section id="section-surprise" class="content reveal">
+    <div class="surprise" id="surprise">
+      <button id="surprise-btn" class="surprise-btn">Открой сюрприз 🎁</button>
+      <div id="surprise-reveal" class="surprise-reveal"></div>
+    </div>
+  </section>
+
+  <!-- ФИНАЛ -->
+  <section id="section-final" class="content reveal">
+    <div class="final">
+      <div class="final-heart">❤</div>
+      <h2 id="final-line" class="script big"></h2>
+      <p id="final-sub"></p>
+    </div>
+  </section>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
